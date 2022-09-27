@@ -36,7 +36,6 @@ const Login = () => {
     try {
       const response = await axios.post(
         LOGIN_URL,
-        //TODO: update backend to accept email and pwd
         JSON.stringify({ email, pwd }),
         {
           headers: { "Content-Type": "application/json" },
@@ -44,8 +43,6 @@ const Login = () => {
         }
       );
       console.log(JSON.stringify(response?.data));
-      //console.log(JSON.stringify(response));
-      //TODO: update backend to send userId
       const accessToken = response?.data?.accessToken;
       const roles = response?.data?.roles;
       const userId = response?.data?.userId;
