@@ -25,7 +25,6 @@ const Logout = () => {
       //TODO: add a logout method to useAuth hook which clears data
       //TODO: refresh token not delted in database after logout....
       // TODO: user page looses data after refresh
-      // currently secure: true so only https ... test in production
       setAuth((prev) => {
         return { ...prev, user: "", roles: "", accessToken: "" };
       });
@@ -54,7 +53,6 @@ const Logout = () => {
             <br />
             <a href="login">Sign In</a>
             <br />
-            <a href="/">Home</a>
           </p>
         </section>
       ) : (
