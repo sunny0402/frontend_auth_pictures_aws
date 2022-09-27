@@ -15,7 +15,8 @@ const Users = ({ userId }) => {
 
     const getUserInfo = async () => {
       try {
-        const response = await axiosPrivate.get(`users/${userId}`, {
+        //TODO: baseurl localhost:5000/api
+        const response = await axiosPrivate.get(`/users/${userId}`, {
           signal: controller.signal,
         });
         console.log("User component: ", response.data);
